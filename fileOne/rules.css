@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Smartphones */
+
+@media only screen and (max-width: 375px) {
+    .rules {
+    background-color: white;
+    width: 100vw;
+    padding-top: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.rules .rules-h2 {
+    color: rgba(12, 46, 11, 0.911);
+    background-color: rgb(225, 233, 230);
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+}
+.rules ol {
+    margin: 0 ;
+    background-color: rgb(247, 247, 250);
+    list-style-position: inside;
+    padding-left: 0;   
+}
+
+.rules ol li {
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+.rules ol li:nth-child(odd){
+    background-color: rgb(132, 199, 199);
+}
+.rules ol li:nth-child(even){
+    background-color: rgb(143, 170, 170);
+}
+
+}
