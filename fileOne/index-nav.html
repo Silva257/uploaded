@@ -1,0 +1,133 @@
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Only Responsive Menu</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Navigation container */
+        .nav-container {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+        
+        /* Mobile menu button (hamburger) */
+        .menu-button {
+            cursor: pointer;
+            display: block;
+            padding: 0.5rem;
+        }
+        
+        /* Hamburger icon bars */
+        .menu-button .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hide the checkbox */
+        #menu-toggle {
+            display: none;
+        }
+        
+        /* Navigation links - hidden by default on mobile */
+        .nav-links {
+            list-style: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        /* When checkbox is checked, show the menu */
+        #menu-toggle:checked ~ .nav-links {
+            max-height: 500px; /* Adjust based on your content */
+        }
+        
+        /* Style the navigation links */
+        .nav-links li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #444;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+        }
+        
+        .nav-links a:hover {
+            background-color: #555;
+        }
+        
+        /* Desktop styles - show as tabs */
+        @media (min-width: 768px) {
+            /* Hide the hamburger button */
+            .menu-button {
+                display: none;
+            }
+            
+            /* Show the nav links */
+            .nav-links {
+                max-height: none;
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            /* Style as tabs */
+            .nav-links li {
+                border-bottom: none;
+                margin-right: 1rem;
+            }
+            
+            .nav-links a {
+                padding: 0.5rem 1rem;
+                border-radius: 4px 4px 0 0;
+            }
+            
+            .nav-links a:hover {
+                background-color: #555;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <!-- Checkbox hack for toggle functionality -->
+        <input type="checkbox" id="menu-toggle" />
+        
+        <!-- Hamburger menu button -->
+        <label for="menu-toggle" class="menu-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+        
+        <!-- Navigation links -->
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Welcome to our website</h1>
+        <p>Resize the browser window to see the responsive menu in action.</p>
+    </main>
+</body>
+</html>
