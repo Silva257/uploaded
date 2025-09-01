@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
 }
+:root {
+    --BGCOLOR: rgb(225, 233, 230)
+}
 
 /* Smartphones */
 
@@ -15,7 +18,7 @@ body {
 }
 .rules .rules-h2 {
     color: rgba(12, 46, 11, 0.911);
-    background-color: rgb(225, 233, 230);
+    background-color: var(--BGCOLOR);
     padding: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
